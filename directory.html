@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Truck Directory — RoamBite</title>
+  <meta name="description" content="Search and filter verified local food trucks by cuisine, location, availability, rating, and price range.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body data-page="directory">
+  <header id="site-header"></header>
+
+  <main>
+    <!-- 1. Directory Page Hero -->
+    <section class="page-hero">
+      <div class="container page-hero-grid">
+        <div class="page-hero-content">
+          <span class="eyebrow">Verified Mobile Kitchens</span>
+          <h1>Explore the Food Truck Directory</h1>
+          <p>Filter by cuisine, neighborhood, live availability, guest rating, or budget—then inspect full menus and book directly.</p>
+          <div class="page-hero-actions">
+            <a href="#directoryTrucksGrid" class="btn btn-primary">Browse All Trucks</a>
+            <button type="button" class="btn btn-outline-light" data-book-truck="sol-birria">Request Event Quote</button>
+          </div>
+        </div>
+        <div class="page-hero-media">
+          <div class="page-hero-frame">
+            <img src="assets/images/truck-burger.jpg" alt="Double smash cheeseburger and fries from food truck">
+          </div>
+          <div class="page-hero-badge">
+            <div class="hero-floating-icon">★ 4.9</div>
+            <div>
+              <strong style="display:block; font-size:0.95rem;">Live Hours & Menus</strong>
+              <span style="font-size:0.82rem; color:var(--text-secondary);">Instant quotes • Verified permits</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Interactive Search, Filters & Truck Listings -->
+    <section class="section bg-cream">
+      <div class="container">
+        <div class="directory-filter-bar">
+          <div class="filter-controls-grid" style="grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr 1fr;">
+            <div class="form-group">
+              <label class="form-label" for="dirSearchInput">Search Truck</label>
+              <input type="text" id="dirSearchInput" class="form-control" placeholder="e.g. Birria, Smash, Bao...">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="dirLocationSelect">Location</label>
+              <select id="dirLocationSelect" class="form-control">
+                <option value="All">All Cities</option>
+                <option value="Austin, TX">Austin, TX</option>
+                <option value="Denver, CO">Denver, CO</option>
+                <option value="Nashville, TN">Nashville, TN</option>
+                <option value="Portland, OR">Portland, OR</option>
+                <option value="San Diego, CA">San Diego, CA</option>
+                <option value="Boston, MA">Boston, MA</option>
+                <option value="Chicago, IL">Chicago, IL</option>
+                <option value="Seattle, WA">Seattle, WA</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="dirCuisineSelect">Cuisine</label>
+              <select id="dirCuisineSelect" class="form-control">
+                <option value="All">All Cuisines</option>
+                <option value="Mexican">Mexican</option>
+                <option value="Indian">Indian</option>
+                <option value="Italian">Italian</option>
+                <option value="Chinese">Chinese</option>
+                <option value="Burgers">Burgers</option>
+                <option value="Pizza">Pizza</option>
+                <option value="BBQ">BBQ</option>
+                <option value="Desserts">Desserts</option>
+                <option value="Street Food">Street Food</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="dirAvailSelect">Availability</label>
+              <select id="dirAvailSelect" class="form-control">
+                <option value="All">Any Availability</option>
+                <option value="Open Now">Open Now</option>
+                <option value="Booking Available">Booking Available</option>
+                <option value="Weekend Events">Weekend Events</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="dirRatingSelect">Minimum Rating</label>
+              <select id="dirRatingSelect" class="form-control">
+                <option value="0">All Ratings</option>
+                <option value="4.8">4.8★ & Up</option>
+                <option value="4.5">4.5★ & Up</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="dirPriceSelect">Price Range</label>
+              <select id="dirPriceSelect" class="form-control">
+                <option value="All">Any Price</option>
+                <option value="$">$ (Budget Friendly)</option>
+                <option value="$$">$$ (Moderate)</option>
+                <option value="$$$">$$$ (Premium)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="category-pills-row" id="dirCategoryPills">
+            <button type="button" class="cat-pill active" data-cuisine="All">All Trucks</button>
+            <button type="button" class="cat-pill" data-cuisine="Mexican">Mexican</button>
+            <button type="button" class="cat-pill" data-cuisine="Indian">Indian</button>
+            <button type="button" class="cat-pill" data-cuisine="Italian">Italian</button>
+            <button type="button" class="cat-pill" data-cuisine="Chinese">Chinese</button>
+            <button type="button" class="cat-pill" data-cuisine="Burgers">Burgers</button>
+            <button type="button" class="cat-pill" data-cuisine="Pizza">Pizza</button>
+            <button type="button" class="cat-pill" data-cuisine="BBQ">BBQ</button>
+            <button type="button" class="cat-pill" data-cuisine="Desserts">Desserts</button>
+            <button type="button" class="cat-pill" data-cuisine="Street Food">Street Food</button>
+          </div>
+        </div>
+
+        <div class="results-toolbar">
+          <strong id="dirResultsCount" style="color:var(--purple-deep);">Showing food trucks</strong>
+          <div style="display:flex; align-items:center; gap:10px;">
+            <select id="dirSortSelect" class="form-control" style="padding:8px 14px;" aria-label="Sort trucks">
+              <option value="recommended">Sort: Recommended</option>
+              <option value="rating">Highest Rated</option>
+              <option value="reviews">Most Reviewed</option>
+              <option value="name">Name (A–Z)</option>
+            </select>
+            <button type="button" id="dirResetBtn" class="btn btn-outline btn-sm">Reset</button>
+          </div>
+        </div>
+
+        <div class="grid-3" id="directoryTrucksGrid"></div>
+      </div>
+    </section>
+
+    <!-- 3. Top Food Truck Cities -->
+    <section class="section bg-white reveal">
+      <div class="container">
+        <div class="section-header centered">
+          <span class="eyebrow">Active Markets</span>
+          <h2 class="section-title">Browse by Food Truck Hub</h2>
+          <p class="section-subtitle">Click any city to jump straight to verified mobile kitchens serving that metro area.</p>
+        </div>
+        <div class="city-hub-grid">
+          <a href="directory.html?city=Austin" class="city-hub-pill">
+            <div>
+              <strong style="display:block; font-size:1.05rem;">Austin, TX</strong>
+              <p style="font-size:0.84rem; color:var(--text-muted);">South Congress & East 6th</p>
+            </div>
+            <span style="font-weight:800; color:var(--orange-warm);">→</span>
+          </a>
+          <a href="directory.html?city=Nashville" class="city-hub-pill">
+            <div>
+              <strong style="display:block; font-size:1.05rem;">Nashville, TN</strong>
+              <p style="font-size:0.84rem; color:var(--text-muted);">The Gulch & East Nashville</p>
+            </div>
+            <span style="font-weight:800; color:var(--orange-warm);">→</span>
+          </a>
+          <a href="directory.html?city=Denver" class="city-hub-pill">
+            <div>
+              <strong style="display:block; font-size:1.05rem;">Denver, CO</strong>
+              <p style="font-size:0.84rem; color:var(--text-muted);">RiNo Art District & LoDo</p>
+            </div>
+            <span style="font-weight:800; color:var(--orange-warm);">→</span>
+          </a>
+          <a href="directory.html?city=Portland" class="city-hub-pill">
+            <div>
+              <strong style="display:block; font-size:1.05rem;">Portland, OR</strong>
+              <p style="font-size:0.84rem; color:var(--text-muted);">Hawthorne & Pod Plazas</p>
+            </div>
+            <span style="font-weight:800; color:var(--orange-warm);">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. What's Included in Every Booking (Split Guarantee Showcase) -->
+    <section class="section bg-pink reveal">
+      <div class="container booking-includes-split">
+        <div class="guarantee-panel">
+          <span class="badge badge-booking" style="margin-bottom:14px;">Event Readiness</span>
+          <h2 style="font-size:2rem; margin-bottom:12px;">Every RoamBite Booking Includes</h2>
+          <p style="color:rgba(255,255,255,0.84); margin-bottom:24px;">Zero guesswork for venue managers, HR teams, and wedding planners. Every listed truck meets strict operational standards.</p>
+          <button type="button" class="btn btn-primary" data-book-truck="sol-birria">Request Instant Quote</button>
+        </div>
+
+        <div class="guarantee-pills-stack">
+          <div class="guarantee-pill-row">
+            <div class="guarantee-check">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div>
+              <h3 style="color:var(--purple-deep); font-size:1.12rem; margin-bottom:4px;">Verified Permits & Insurance</h3>
+              <p style="font-size:0.92rem; color:var(--text-secondary);">Active city health inspection scores and commercial liability certificates on file for venues.</p>
+            </div>
+          </div>
+          <div class="guarantee-pill-row">
+            <div class="guarantee-check" style="background:var(--purple-deep);">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <div>
+              <h3 style="color:var(--purple-deep); font-size:1.12rem; margin-bottom:4px;">Self-Contained Mobile Kitchen</h3>
+              <p style="font-size:0.92rem; color:var(--text-secondary);">Trucks arrive with quiet inverter generators, water tanks, eco-friendly boats, and napkins.</p>
+            </div>
+          </div>
+          <div class="guarantee-pill-row">
+            <div class="guarantee-check">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <h3 style="color:var(--purple-deep); font-size:1.12rem; margin-bottom:4px;">High-Speed Event Service</h3>
+              <p style="font-size:0.92rem; color:var(--text-secondary);">Curated 3-to-5 dish event menus designed to serve 60–85 hot plates per hour per truck.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Group & Multi-Truck Showcase Card -->
+    <section class="section bg-white reveal">
+      <div class="container">
+        <div class="concierge-showcase-card">
+          <div>
+            <span class="eyebrow">Multi-Truck Rallies</span>
+            <h2 class="section-title" style="margin-bottom:14px;">Hosting 200+ Guests? Pair Two Trucks.</h2>
+            <p style="color:var(--text-secondary); margin-bottom:18px;">For large corporate picnics, campus festivals, and weddings, pairing a savory main truck with a dessert & coffee truck keeps lines under 5 minutes.</p>
+            <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:24px;">
+              <span class="badge badge-purple">150–250 Guests</span>
+              <span class="badge badge-booking">250–500 Guests</span>
+              <span class="badge badge-open">500+ Festival</span>
+            </div>
+            <a href="contact.html" class="btn btn-purple">Request Multi-Truck Concierge</a>
+          </div>
+          <div style="position:relative;">
+            <img src="assets/images/hero-festival.jpg" alt="Multi-truck outdoor rally" style="width:100%; height:310px; border-radius:var(--radius-xl); object-fit:cover; box-shadow:var(--shadow-lg);">
+            <div style="position:absolute; bottom:16px; left:16px; background:var(--purple-deep); color:#fff; padding:10px 16px; border-radius:var(--radius-pill); font-weight:700; font-size:0.86rem; box-shadow:var(--shadow-md);">
+              2-Truck Combo • Fast 5-Min Lines
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Vendor Listing CTA -->
+    <section class="section bg-purple reveal">
+      <div class="container" style="text-align:center; max-width:740px;">
+        <span class="eyebrow">For Mobile Kitchen Owners</span>
+        <h2 class="section-title" style="margin-bottom:14px;">Don’t See Your Food Truck Here?</h2>
+        <p class="section-subtitle" style="margin:0 auto 28px;">Create your free directory profile in under 5 minutes and start receiving high-value private catering inquiries.</p>
+        <div style="display:flex; justify-content:center; gap:14px; flex-wrap:wrap;">
+          <a href="vendor-auth.html?tab=signup" class="btn btn-primary btn-lg">Register Your Truck</a>
+          <a href="for-vendors.html" class="btn btn-outline-light btn-lg">Learn About Vendor Plans</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app-state.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/directory.js"></script>
+</body>
+</html>
+

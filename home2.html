@@ -1,0 +1,272 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RoamBite Showcase — Curated Food Truck Discovery & Catering</title>
+  <meta name="description" content="Explore trending food trucks, curated cuisine collections, and featured mobile kitchens on RoamBite.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body data-page="home2">
+  <header id="site-header"></header>
+
+  <main>
+    <!-- 1. Alternative Split Editorial Hero -->
+    <section class="hero-home2">
+      <div class="container hero2-wrap">
+        <div>
+          <span class="eyebrow">Curated Street Food Marketplace</span>
+          <h1 class="hero-title" style="color:var(--purple-deep);">Bring the City's Boldest <span>Food Trucks</span> to Your Door.</h1>
+          <p class="hero-desc" style="color:var(--text-secondary);">Skip generic banquet trays. Browse chef-driven mobile kitchens, compare live menus, and lock in your event date with transparent minimum guarantees.</p>
+          <div style="display:flex; flex-wrap:wrap; gap:14px; margin-bottom:28px;">
+            <a href="directory.html" class="btn btn-primary btn-lg">Browse All Trucks</a>
+            <button type="button" class="btn btn-purple btn-lg" data-book-truck="velvet-smash">Instant Event Quote</button>
+          </div>
+          <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px; padding-top:20px; border-top:1px solid var(--cream-border);">
+            <div>
+              <strong style="font-size:1.5rem; color:var(--purple-deep); display:block;">240+</strong>
+              <span style="font-size:0.84rem; color:var(--text-muted);">Active Trucks</span>
+            </div>
+            <div>
+              <strong style="font-size:1.5rem; color:var(--orange-warm); display:block;">4.9★</strong>
+              <span style="font-size:0.84rem; color:var(--text-muted);">Avg Host Rating</span>
+            </div>
+            <div>
+              <strong style="font-size:1.5rem; color:var(--purple-deep); display:block;">24 hr</strong>
+              <span style="font-size:0.84rem; color:var(--text-muted);">Booking Confirm</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero2-collage">
+          <img src="assets/images/hero-festival.jpg" alt="Outdoor food truck festival at golden hour" class="tall">
+          <img src="assets/images/truck-burger.jpg" alt="Gourmet smash burger basket">
+          <img src="assets/images/truck-lobster.jpg" alt="Warm butter lobster roll">
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Interactive Discovery Section -->
+    <section class="section bg-white reveal">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="eyebrow">Live Filter</span>
+            <h2 class="section-title">Discover by Mood & Availability</h2>
+            <p class="section-subtitle">Switch tabs to preview trucks open right now, top-rated favorites, or budget-friendly street eats.</p>
+          </div>
+          <a href="directory.html" class="btn btn-outline">Open Full Filters →</a>
+        </div>
+
+        <div class="discovery-tabs" id="home2Tabs">
+          <button type="button" class="tab-pill active" data-tab="all">All Featured</button>
+          <button type="button" class="tab-pill" data-tab="open">Open Now</button>
+          <button type="button" class="tab-pill" data-tab="top">Highest Rated (4.8+)</button>
+          <button type="button" class="tab-pill" data-tab="budget">Budget-Friendly ($)</button>
+          <button type="button" class="tab-pill" data-tab="catering">Catering Ready</button>
+        </div>
+
+        <div class="grid-4" id="home2DiscoveryGrid"></div>
+      </div>
+    </section>
+
+    <!-- 3. Curated Cuisine Collections -->
+    <section class="section bg-pink reveal">
+      <div class="container">
+        <div class="section-header centered">
+          <span class="eyebrow">Taste Collections</span>
+          <h2 class="section-title">Curated Street Food Collections</h2>
+          <p class="section-subtitle">Hand-grouped flavor experiences for every type of crowd, from late-night taco bars to morning espresso carts.</p>
+        </div>
+        <div class="grid-4">
+          <a href="directory.html?cuisine=Mexican" class="collection-card">
+            <img src="assets/images/truck-tacos.jpg" alt="Tacos and Salsa Collection" loading="lazy">
+            <div class="collection-overlay">
+              <span class="badge badge-booking" style="align-self:flex-start; margin-bottom:8px;">48 Trucks</span>
+              <h3>Tacos & Salsas</h3>
+              <p style="font-size:0.86rem; opacity:0.85;">Quesabirria, al pastor & elote</p>
+            </div>
+          </a>
+          <a href="directory.html?cuisine=BBQ" class="collection-card">
+            <img src="assets/images/truck-bbq.jpg" alt="Smoked BBQ Collection" loading="lazy">
+            <div class="collection-overlay">
+              <span class="badge badge-booking" style="align-self:flex-start; margin-bottom:8px;">29 Trucks</span>
+              <h3>Smokehouse & Pit</h3>
+              <p style="font-size:0.86rem; opacity:0.85;">Post-oak brisket & glazed ribs</p>
+            </div>
+          </a>
+          <a href="directory.html?cuisine=Pizza" class="collection-card">
+            <img src="assets/images/truck-pizza.jpg" alt="Wood-Fired Pizza Collection" loading="lazy">
+            <div class="collection-overlay">
+              <span class="badge badge-booking" style="align-self:flex-start; margin-bottom:8px;">24 Trucks</span>
+              <h3>Wood-Fired Ovens</h3>
+              <p style="font-size:0.86rem; opacity:0.85;">900°F Neapolitan sourdough pies</p>
+            </div>
+          </a>
+          <a href="directory.html?cuisine=Desserts" class="collection-card">
+            <img src="assets/images/truck-churros.jpg" alt="Churros and Espresso Collection" loading="lazy">
+            <div class="collection-overlay">
+              <span class="badge badge-booking" style="align-self:flex-start; margin-bottom:8px;">22 Trucks</span>
+              <h3>Sweets & Espresso</h3>
+              <p style="font-size:0.86rem; opacity:0.85;">Warm churros, boba & lattes</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Featured Vendor Spotlight -->
+    <section class="section bg-purple reveal">
+      <div class="container">
+        <div class="spotlight-card" style="color:var(--text-main);">
+          <img src="assets/images/truck-bao.jpg" alt="Cloud Nine Bao Featured Vendor">
+          <div class="spotlight-content">
+            <span class="eyebrow" style="align-self:flex-start;">Vendor of the Month</span>
+            <h2 style="font-size:2.1rem; color:var(--purple-deep); margin-bottom:12px;">Cloud Nine Bao — Portland, OR</h2>
+            <p style="color:var(--text-secondary); margin-bottom:18px;">“Joining RoamBite tripled our private catering bookings. Our steamed pork belly gua bao and crispy tofu baos now feed tech campuses and waterfront festivals every week.”</p>
+            <div style="display:flex; flex-wrap:wrap; gap:10px; margin-bottom:24px;">
+              <span class="badge badge-open">★ 4.8 (265 Reviews)</span>
+              <span class="badge badge-pink">Vegan Options</span>
+              <span class="badge badge-booking">$400 Event Min</span>
+            </div>
+            <div style="display:flex; flex-wrap:wrap; gap:12px;">
+              <button type="button" class="btn btn-primary" data-book-truck="cloud-bao">Book Cloud Nine Bao</button>
+              <button type="button" class="btn btn-outline" data-view-truck="cloud-bao">Inspect Full Menu</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Trending Food Trucks -->
+    <section class="section bg-cream reveal">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="eyebrow">Rising Stars</span>
+            <h2 class="section-title">Trending Food Trucks</h2>
+            <p class="section-subtitle">Fastest-booking mobile kitchens added to RoamBite this season.</p>
+          </div>
+          <a href="directory.html" class="btn btn-purple">See All Listings</a>
+        </div>
+        <div class="trending-overlay-grid" id="home2TrendingGrid"></div>
+      </div>
+    </section>
+
+    <!-- 6. Booking Highlights (How Booking Works) -->
+    <section class="section bg-white reveal">
+      <div class="container">
+        <div class="section-header centered">
+          <span class="eyebrow">Seamless Catering</span>
+          <h2 class="section-title">How Event Booking Works</h2>
+          <p class="section-subtitle">Four simple steps from craving to curb-side service.</p>
+        </div>
+        <div class="timeline-grid">
+          <div class="timeline-step">
+            <div class="timeline-orb">01</div>
+            <h3 style="color:var(--purple-deep); margin-bottom:8px;">Filter & Compare</h3>
+            <p style="font-size:0.92rem; color:var(--text-secondary);">Search by cuisine, city, guest minimum, and verified reviews in our directory.</p>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-orb">02</div>
+            <h3 style="color:var(--purple-deep); margin-bottom:8px;">Send Event Brief</h3>
+            <p style="font-size:0.92rem; color:var(--text-secondary);">Pick your date, headcount, and location in 60 seconds with zero phone tag.</p>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-orb">03</div>
+            <h3 style="color:var(--purple-deep); margin-bottom:8px;">Lock Your Menu</h3>
+            <p style="font-size:0.92rem; color:var(--text-secondary);">Customize 3–5 signature dishes plus vegan or gluten-free options for your guests.</p>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-orb">04</div>
+            <h3 style="color:var(--purple-deep); margin-bottom:8px;">Roll Up & Feast</h3>
+            <p style="font-size:0.92rem; color:var(--text-secondary);">Your truck arrives self-contained, serves hot food fast, and handles cleanup.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Dual Promotional Event Banners -->
+    <section class="section-sm bg-cream-warm reveal">
+      <div class="container grid-2">
+        <div style="background:var(--purple-deep); color:#fff; border-radius:var(--radius-xl); padding:38px; display:flex; flex-direction:column; justify-content:space-between;">
+          <div>
+            <span class="eyebrow">Corporate & Tech</span>
+            <h3 style="font-size:1.75rem; margin-bottom:10px;">Office Lunch Takeovers</h3>
+            <p style="opacity:0.84; margin-bottom:24px;">Boost team morale with rotating weekly food trucks. Single consolidated invoice, zero per-person guesswork.</p>
+          </div>
+          <button type="button" class="btn btn-primary" style="align-self:flex-start;" data-book-truck="olive-grove">Plan Office Lunch</button>
+        </div>
+
+        <div style="background:linear-gradient(135deg, var(--orange-warm), #FF874B); color:#fff; border-radius:var(--radius-xl); padding:38px; display:flex; flex-direction:column; justify-content:space-between;">
+          <div>
+            <span class="eyebrow" style="background:rgba(255,255,255,0.22); color:#fff;">Weddings & Parties</span>
+            <h3 style="font-size:1.75rem; margin-bottom:10px;">Late-Night Taco & Churro Bars</h3>
+            <p style="opacity:0.92; margin-bottom:24px;">Surprise your guests at 10 PM with hot quesabirria tacos, smash burgers, or warm chocolate-dipped churros.</p>
+          </div>
+          <button type="button" class="btn btn-cream" style="align-self:flex-start;" data-book-truck="dulce-roam">Reserve Dessert Truck</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Testimonials -->
+    <section class="section bg-white reveal">
+      <div class="container">
+        <div class="section-header centered">
+          <span class="eyebrow">Verified Feedback</span>
+          <h2 class="section-title">Loved by Planners & Truck Owners</h2>
+        </div>
+        <div class="grid-2">
+          <article class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-quote">“RoamBite made organizing our 3-day street food festival effortless. Every vendor showed up on time with permits ready and lines moving.”</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">DB</div>
+              <div>
+                <strong style="color:var(--purple-deep); display:block;">Devon Brooks</strong>
+                <span style="font-size:0.84rem; color:var(--text-muted);">Festival Organizer, Denver</span>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-quote">“Having Velvet Smash Co. and Dulce & Espresso roll up at 10 PM for our wedding reception was unforgettable. Best decision we made.”</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">CV</div>
+              <div>
+                <strong style="color:var(--purple-deep); display:block;">Carlos & Elena Vega</strong>
+                <span style="font-size:0.84rem; color:var(--text-muted);">Wedding Hosts, Austin</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Newsletter Subscription Band -->
+    <section class="section bg-pink reveal">
+      <div class="container" style="max-width:740px; text-align:center;">
+        <span class="eyebrow">Weekly Street Food Drops</span>
+        <h2 class="section-title" style="color:var(--purple-deep); margin-bottom:12px;">Never Miss a Pop-Up Rally</h2>
+        <p style="color:var(--text-secondary); margin-bottom:26px;">Get Friday night food truck lineups, new vendor openings, and exclusive $50 booking codes delivered once a week.</p>
+        <form id="home2NewsletterForm" style="display:flex; gap:10px; max-width:520px; margin:0 auto; flex-wrap:wrap;">
+          <input type="email" class="form-control" placeholder="Enter your email address..." required style="flex:1; min-width:220px; border-radius:var(--radius-pill);">
+          <button type="submit" class="btn btn-purple">Subscribe Free</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app-state.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+

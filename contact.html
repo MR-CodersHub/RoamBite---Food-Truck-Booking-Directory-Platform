@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Support — RoamBite</title>
+  <meta name="description" content="Get in touch with RoamBite for event concierge booking help, vendor onboarding support, or partnership inquiries.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body data-page="contact">
+  <header id="site-header"></header>
+
+  <main>
+    <!-- 1. Contact Page Hero -->
+    <section class="page-hero">
+      <div class="container page-hero-grid">
+        <div class="page-hero-content">
+          <span class="eyebrow">Here to Help</span>
+          <h1>Contact RoamBite Support</h1>
+          <p>Planning a multi-truck festival, need help with an active booking, or have questions about listing your mobile kitchen? Reach our team below.</p>
+          <div class="page-hero-actions">
+            <a href="#contactForm" class="btn btn-primary">Send a Message</a>
+            <a href="#faq" class="btn btn-outline-light">View FAQs</a>
+          </div>
+        </div>
+        <div class="page-hero-media">
+          <div class="page-hero-frame">
+            <img src="assets/images/truck-churros.jpg" alt="Fresh cinnamon churros and iced horchata espresso">
+          </div>
+          <div class="page-hero-badge">
+            <div class="hero-floating-icon">24h</div>
+            <div>
+              <strong style="display:block; font-size:0.95rem;">Fast Concierge Reply</strong>
+              <span style="font-size:0.82rem; color:var(--text-secondary);">Mon–Sat 8AM–8PM • Austin HQ</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Contact Form & Business Info Split -->
+    <section class="section bg-cream">
+      <div class="container grid-2" style="align-items:start;">
+        <div class="contact-form-card" style="padding:36px; border-radius:var(--radius-xl); border:1px solid var(--cream-border); box-shadow:var(--shadow-md);">
+          <h2 style="color:var(--purple-deep); font-size:1.75rem; margin-bottom:8px;">Send Us a Message</h2>
+          <p style="color:var(--text-secondary); margin-bottom:24px;">Expect a response from a real event specialist within 1 business day.</p>
+          <form id="contactForm" class="form-grid">
+            <div class="form-group">
+              <label class="form-label" for="contactName">Full Name</label>
+              <input type="text" id="contactName" class="form-control" placeholder="Taylor Morgan" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contactEmail">Email Address</label>
+              <input type="email" id="contactEmail" class="form-control" placeholder="taylor@example.com" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contactTopic">Topic</label>
+              <select id="contactTopic" class="form-control">
+                <option>Private Event Booking Help</option>
+                <option>Multi-Truck Festival Concierge</option>
+                <option>Vendor Onboarding & Account</option>
+                <option>Press & Partnerships</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contactCity">City / Metro Area</label>
+              <input type="text" id="contactCity" class="form-control" placeholder="Austin, TX">
+            </div>
+            <div class="form-group full">
+              <label class="form-label" for="contactMessage">How Can We Help?</label>
+              <textarea id="contactMessage" class="form-control" rows="4" placeholder="Share your event date, guest count, or question..." required></textarea>
+            </div>
+            <div class="form-group full">
+              <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">Send Message</button>
+            </div>
+          </form>
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:20px;">
+          <div class="step-card" style="padding:32px;">
+            <span class="eyebrow">Headquarters</span>
+            <h3 style="color:var(--purple-deep); margin-bottom:12px;">RoamBite Austin Hub</h3>
+            <p style="color:var(--text-secondary); margin-bottom:16px;">412 Congress Ave, Suite 300<br>Austin, TX 78701</p>
+            <div style="display:flex; flex-direction:column; gap:10px; font-size:0.95rem;">
+              <div><strong>Phone:</strong> (512) 555-0194</div>
+              <div><strong>General:</strong> hello@roambite.com</div>
+              <div><strong>Vendors:</strong> vendors@roambite.com</div>
+              <div><strong>Support Hours:</strong> Mon–Sat, 8:00 AM – 8:00 PM CST</div>
+            </div>
+          </div>
+
+          <div class="step-card" style="padding:32px; background:var(--pink-light); border-color:var(--pink-soft);">
+            <h3 style="color:var(--purple-deep); margin-bottom:8px;">Need an Urgent Event Replacement?</h3>
+            <p style="color:var(--text-secondary); font-size:0.94rem; margin-bottom:16px;">For active bookings happening within 48 hours, call our priority dispatch line for immediate backup truck matching.</p>
+            <a href="directory.html" class="btn btn-purple btn-sm">Check Live Availability</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2B. Headquarters & Food Truck Hub Map Section -->
+    <section class="section-sm bg-white reveal">
+      <div class="container">
+        <div class="map-showcase-card" style="background:var(--cream-soft); border:1.5px solid var(--cream-border); border-radius:var(--radius-xl); overflow:hidden; box-shadow:var(--shadow-md); display:grid; grid-template-columns:0.85fr 1.15fr;">
+          <div style="padding:36px 32px; display:flex; flex-direction:column; justify-content:space-between;">
+            <div>
+              <span class="eyebrow">Visit Our Hub</span>
+              <h2 style="color:var(--purple-deep); font-size:1.7rem; margin-bottom:10px;">Austin Food Truck Dispatch & HQ</h2>
+              <p style="color:var(--text-secondary); font-size:0.95rem; margin-bottom:20px;">Stop by our downtown Austin office for vendor permit onboarding, tasting pop-ups, or festival planning consultations.</p>
+              <div style="display:flex; flex-direction:column; gap:10px; font-size:0.92rem; color:var(--text-secondary);">
+                <div><strong>Address:</strong> 412 Congress Ave, Suite 300, Austin, TX 78701</div>
+                <div><strong>Visitor Parking:</strong> Congress Ave Garage (2-min walk)</div>
+                <div><strong>Rally Zone:</strong> Republic Square Plaza (2 blocks west)</div>
+              </div>
+            </div>
+            <div style="margin-top:24px; display:flex; gap:10px; flex-wrap:wrap;">
+              <a href="https://www.openstreetmap.org/?mlat=30.2666&mlon=-97.7431#map=16/30.2666/-97.7431" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Open in Maps</a>
+              <a href="directory.html?city=Austin" class="btn btn-outline btn-sm">Austin Trucks</a>
+            </div>
+          </div>
+          <div style="min-height:340px; position:relative;">
+            <iframe
+              title="RoamBite Austin Headquarters Map"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=-97.7510%2C30.2620%2C-97.7350%2C30.2710&layer=mapnik&marker=30.2666%2C-97.7431"
+              style="width:100%; height:100%; min-height:340px; border:0; display:block;"
+              loading="lazy">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Support Channels (Concierge Split) -->
+    <section class="section bg-white reveal">
+      <div class="container">
+        <div class="section-header centered">
+          <span class="eyebrow">Dedicated Teams</span>
+          <h2 class="section-title">How We Support You</h2>
+        </div>
+        <div class="support-split-layout">
+          <div class="support-sla-card">
+            <div>
+              <span class="badge badge-booking" style="margin-bottom:14px;">Live Concierge Desk</span>
+              <h3 style="font-size:1.75rem; margin-bottom:12px;">Real Humans Who Know Food Trucks</h3>
+              <p style="color:rgba(255,255,255,0.84); font-size:0.95rem;">From power clearance and COI certificates to multi-truck festival scheduling, our dispatch team handles the logistics so your event runs smoothly.</p>
+            </div>
+            <div style="margin-top:26px; padding-top:20px; border-top:1px solid rgba(255,255,255,0.16); display:flex; flex-direction:column; gap:8px; font-size:0.9rem;">
+              <div><strong>Avg Response:</strong> Under 2 Hours</div>
+              <div><strong>Emergency Line:</strong> (512) 555-0194</div>
+            </div>
+          </div>
+
+          <div class="support-channel-stack">
+            <div class="support-channel-row">
+              <div class="vendor-icon-circle" style="margin:0; flex-shrink:0;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              </div>
+              <div>
+                <h3 style="color:var(--purple-deep); font-size:1.15rem; margin-bottom:4px;">Event Concierge</h3>
+                <p style="color:var(--text-secondary); font-size:0.92rem;">Need 3+ trucks for a corporate campus or city block party? We coordinate menus, spacing, and COI paperwork.</p>
+              </div>
+            </div>
+            <div class="support-channel-row">
+              <div class="vendor-icon-circle" style="margin:0; flex-shrink:0;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M10 17h4V5H2v12h3"/><path d="M20 17h2v-3.34a4 4 0 0 0-1.17-2.83L19 9h-5v8h1"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>
+              </div>
+              <div>
+                <h3 style="color:var(--purple-deep); font-size:1.15rem; margin-bottom:4px;">Vendor Success</h3>
+                <p style="color:var(--text-secondary); font-size:0.92rem;">Help uploading health permits, setting catering minimums, or syncing your weekly street-corner schedule.</p>
+              </div>
+            </div>
+            <div class="support-channel-row">
+              <div class="vendor-icon-circle" style="margin:0; flex-shrink:0;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <h3 style="color:var(--purple-deep); font-size:1.15rem; margin-bottom:4px;">Venue Partnerships</h3>
+                <p style="color:var(--text-secondary); font-size:0.92rem;">Breweries, apartment communities, and office parks—let’s build a recurring weekly food truck rotation.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Active Service Locations (Contrast Stat Strip) -->
+    <section class="section bg-cream-warm reveal">
+      <div class="container">
+        <div class="section-header centered">
+          <span class="eyebrow">Where We Roll</span>
+          <h2 class="section-title">Active Food Truck Metro Hubs</h2>
+          <p class="section-subtitle">Serving 18 major U.S. cities with verified mobile kitchens ready for street service and private events.</p>
+        </div>
+        <div class="metro-stats-strip">
+          <a href="directory.html?city=Austin" class="metro-stat-tile">
+            <div class="metro-big-num">52</div>
+            <strong style="display:block; font-size:1.1rem; margin-bottom:4px;">Austin & San Antonio</strong>
+            <span style="font-size:0.85rem; opacity:0.8;">Active verified trucks →</span>
+          </a>
+          <a href="directory.html?city=Denver" class="metro-stat-tile">
+            <div class="metro-big-num">34</div>
+            <strong style="display:block; color:var(--purple-deep); font-size:1.1rem; margin-bottom:4px;">Denver & Boulder</strong>
+            <span style="font-size:0.85rem; color:var(--text-muted);">Active verified trucks →</span>
+          </a>
+          <a href="directory.html?city=Nashville" class="metro-stat-tile">
+            <div class="metro-big-num">41</div>
+            <strong style="display:block; color:var(--purple-deep); font-size:1.1rem; margin-bottom:4px;">Nashville & Atlanta</strong>
+            <span style="font-size:0.85rem; color:var(--text-muted);">Active verified trucks →</span>
+          </a>
+          <a href="directory.html?city=Portland" class="metro-stat-tile">
+            <div class="metro-big-num">38</div>
+            <strong style="display:block; color:var(--purple-deep); font-size:1.1rem; margin-bottom:4px;">Portland & Seattle</strong>
+            <span style="font-size:0.85rem; color:var(--text-muted);">Active verified trucks →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Frequently Asked Questions -->
+    <section class="section bg-white reveal" id="faq">
+      <div class="container">
+        <div class="section-header centered">
+          <span class="eyebrow">Quick Answers</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+        </div>
+        <div class="faq-list" id="contactFaqList"></div>
+      </div>
+    </section>
+
+    <!-- 6. Bottom CTA -->
+    <section class="section bg-purple reveal">
+      <div class="container" style="text-align:center; max-width:700px;">
+        <h2 class="section-title" style="margin-bottom:12px;">Ready to Book Your Next Meal on Wheels?</h2>
+        <p class="section-subtitle" style="margin:0 auto 26px;">Browse verified trucks, compare menus, and request your event date in minutes.</p>
+        <a href="directory.html" class="btn btn-primary btn-lg">Explore Truck Directory</a>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app-state.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+</html>
+

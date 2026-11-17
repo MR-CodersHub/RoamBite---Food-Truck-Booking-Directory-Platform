@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Street Food Blog & Guides — RoamBite</title>
+  <meta name="description" content="Food truck catering guides, vendor success stories, street food trends, and upcoming festival updates.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body data-page="blog">
+  <header id="site-header"></header>
+
+  <main>
+    <!-- 1. Blog Page Hero -->
+    <section class="page-hero">
+      <div class="container page-hero-grid">
+        <div class="page-hero-content">
+          <span class="eyebrow">The RoamBite Journal</span>
+          <h1>Street Food Stories, Guides & Event Drops</h1>
+          <p>Expert catering playbooks for event hosts, behind-the-window chef interviews, and the latest food truck rally announcements.</p>
+          <div class="page-hero-actions">
+            <a href="#blogArticlesGrid" class="btn btn-primary">Read Latest Posts</a>
+            <a href="directory.html" class="btn btn-outline-light">Explore Trucks</a>
+          </div>
+        </div>
+        <div class="page-hero-media">
+          <div class="page-hero-frame">
+            <img src="assets/images/truck-pizza.jpg" alt="Wood-fired Neapolitan pizza pulled from food truck oven">
+          </div>
+          <div class="page-hero-badge">
+            <div class="hero-floating-icon">28K+</div>
+            <div>
+              <strong style="display:block; font-size:0.95rem;">Weekly Readers</strong>
+              <span style="font-size:0.82rem; color:var(--text-secondary);">Guides, recipes & rally alerts</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Featured Post -->
+    <section class="section-sm bg-cream">
+      <div class="container">
+        <article class="blog-featured">
+          <img src="assets/images/hero-festival.jpg" alt="Outdoor food truck rally at golden hour">
+          <div class="blog-featured-body">
+            <span class="badge badge-booking" style="align-self:flex-start; margin-bottom:12px;">Featured Guide • 6 min read</span>
+            <h2 style="color:var(--purple-deep); font-size:1.95rem; margin-bottom:12px;">How to Book the Perfect Food Truck Lineup for Your Wedding or Corporate Event</h2>
+            <p style="color:var(--text-secondary); margin-bottom:20px;">From calculating guest-per-hour service speed to balancing savory mains with dessert trucks, here is our complete playbook for stress-free mobile catering.</p>
+            <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;">
+              <span style="font-size:0.88rem; color:var(--text-muted); font-weight:600;">By Camila Reyes • Nov 12, 2026</span>
+              <button type="button" class="btn btn-primary" data-read-article="art-1">Read Full Guide</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 3. Category Filters & Articles Grid -->
+    <section class="section bg-white">
+      <div class="container">
+        <div class="section-header" style="margin-bottom:28px;">
+          <div>
+            <span class="eyebrow">All Articles</span>
+            <h2 class="section-title">Latest from the Curb</h2>
+          </div>
+          <div style="min-width:260px;">
+            <input type="text" id="blogSearchInput" class="form-control" placeholder="Search articles...">
+          </div>
+        </div>
+
+        <div class="category-pills-row" id="blogCategoryPills" style="border-top:none; padding-top:0; margin-bottom:32px;">
+          <button type="button" class="cat-pill active" data-category="All">All Posts</button>
+          <button type="button" class="cat-pill" data-category="Guides">Guides</button>
+          <button type="button" class="cat-pill" data-category="Vendor Stories">Vendor Stories</button>
+          <button type="button" class="cat-pill" data-category="Events">Events</button>
+          <button type="button" class="cat-pill" data-category="Trends">Trends</button>
+        </div>
+
+        <div class="grid-3" id="blogArticlesGrid"></div>
+      </div>
+    </section>
+
+    <!-- 4. Event Planning Quick Guides -->
+    <section class="section bg-pink reveal">
+      <div class="container">
+        <div class="section-header centered">
+          <span class="eyebrow">Quick Checklists</span>
+          <h2 class="section-title">Popular Street Food Planning Guides</h2>
+        </div>
+        <div class="checklist-editorial">
+          <div class="checklist-card">
+            <span class="badge badge-booking" style="margin-bottom:12px;">Weddings</span>
+            <h3 style="color:var(--purple-deep); margin-bottom:8px;">Late-Night Snack Playbook</h3>
+            <p style="font-size:0.92rem; color:var(--text-secondary);">Ideal timing, parking clearance, and why quesabirria tacos and churros beat traditional buffet trays.</p>
+          </div>
+          <div class="checklist-card">
+            <span class="badge badge-purple" style="margin-bottom:12px;">Corporate</span>
+            <h3 style="color:var(--purple-deep); margin-bottom:8px;">Office Campus Takeovers</h3>
+            <p style="font-size:0.92rem; color:var(--text-secondary);">How HR teams rotate 2 trucks a month with pre-order tickets and dietary tags for 100+ employees.</p>
+          </div>
+          <div class="checklist-card">
+            <span class="badge badge-pink" style="margin-bottom:12px;">Festivals</span>
+            <h3 style="color:var(--purple-deep); margin-bottom:8px;">Neighborhood Block Rallies</h3>
+            <p style="font-size:0.92rem; color:var(--text-secondary);">City permit timelines, generator placement, and pairing savory mains with craft boba & espresso.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Combined Chef Voices & Rally Alerts Split -->
+    <section class="section bg-white reveal">
+      <div class="container blog-editorial-split">
+        <div class="chef-voice-card">
+          <div>
+            <span class="badge badge-booking" style="margin-bottom:16px;">Chef Voices</span>
+            <h3 style="font-size:1.65rem; line-height:1.3; margin-bottom:14px;">“Our story started with one stockpot and a weekend corner. Today we cater 200+ events a year.”</h3>
+            <p style="opacity:0.82;">— Mateo Morales, Chef & Founder of Sol & Smoke Birria</p>
+          </div>
+          <div style="margin-top:26px; display:flex; gap:12px; flex-wrap:wrap;">
+            <a href="for-vendors.html" class="btn btn-primary">Grow Your Truck with Us</a>
+            <button type="button" class="btn btn-outline-light" data-read-article="art-2">Read Chef Story</button>
+          </div>
+        </div>
+
+        <div class="rally-alert-card">
+          <span class="eyebrow" style="align-self:flex-start;">Weekly Dispatch</span>
+          <h3 style="font-size:1.65rem; color:var(--purple-deep); margin-bottom:10px;">Want Fresh Stories & Rally Alerts?</h3>
+          <p style="color:var(--text-secondary); margin-bottom:22px;">Join 28,000+ street food fans receiving our Friday weekend food truck lineup and new vendor openings.</p>
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <a href="directory.html" class="btn btn-purple">Explore Live Directory</a>
+            <a href="contact.html" class="btn btn-outline">Suggest a Truck</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app-state.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/blog.js"></script>
+</body>
+</html>
+

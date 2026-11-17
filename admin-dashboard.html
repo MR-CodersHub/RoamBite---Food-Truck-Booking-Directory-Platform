@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard — RoamBite Platform Management</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body class="dash-body" data-page="admin-dashboard">
+  <div class="dash-layout" id="adminAppShell">
+    <div class="dash-backdrop" id="dashBackdrop"></div>
+
+    <aside class="dash-sidebar" id="dashSidebar">
+      <div>
+        <div class="dash-brand-row">
+          <a href="index.html" class="brand-logo">
+            <div class="brand-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M10 17h4V5H2v12h3"/><path d="M20 17h2v-3.34a4 4 0 0 0-1.17-2.83L19 9h-5v8h1"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>
+            </div>
+            <span>Roam<em>Bite</em></span>
+          </a>
+        </div>
+
+        <div class="dash-role-pill">Admin Control Center</div>
+
+        <nav class="dash-nav" id="adminNav">
+          <button type="button" class="dash-nav-btn active" data-section="overview">Overview</button>
+          <button type="button" class="dash-nav-btn" data-section="users">User Management</button>
+          <button type="button" class="dash-nav-btn" data-section="vendors">Vendor Management</button>
+          <button type="button" class="dash-nav-btn" data-section="trucks">Truck Approvals</button>
+          <button type="button" class="dash-nav-btn" data-section="cuisines">Cuisine Categories</button>
+          <button type="button" class="dash-nav-btn" data-section="bookings">Booking & Orders</button>
+          <button type="button" class="dash-nav-btn" data-section="transactions">Payments & Ledger</button>
+          <button type="button" class="dash-nav-btn" data-section="promos">Promotional Offers</button>
+          <button type="button" class="dash-nav-btn" data-section="reviews">Reviews & Feedback</button>
+          <button type="button" class="dash-nav-btn" data-section="blog">Blog & Content</button>
+          <button type="button" class="dash-nav-btn" data-section="enquiries">Contact Enquiries</button>
+          <button type="button" class="dash-nav-btn" data-section="settings">Website Settings</button>
+        </nav>
+      </div>
+
+      <div class="dash-sidebar-footer">
+        <a href="index.html" class="dash-nav-btn">← Back to Main Site</a>
+        <button type="button" class="dash-nav-btn" id="adminLogoutBtn" style="color:#FFB694;">Sign Out</button>
+      </div>
+    </aside>
+
+    <div class="dash-main">
+      <header class="dash-topbar">
+        <div class="dash-topbar-left">
+          <button type="button" class="header-icon-btn dash-mobile-btn" id="dashMenuToggle" aria-label="Open Menu">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
+          <div class="dash-search-wrap">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="text" id="adminGlobalSearch" placeholder="Search trucks, users, bookings...">
+          </div>
+        </div>
+
+        <div class="dash-topbar-right">
+          <button type="button" class="header-icon-btn" id="dashRtlToggle" title="Toggle RTL / LTR">RTL</button>
+          <button type="button" class="header-icon-btn" id="dashThemeToggle" title="Toggle Theme">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+
+          <div class="dash-dropdown-wrap" id="adminNotifWrap">
+            <button type="button" class="header-icon-btn" id="adminNotifBtn" aria-label="Notifications">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+              <span class="notif-badge-dot" id="adminNotifDot"></span>
+            </button>
+            <div class="dash-dropdown-menu" id="adminNotifMenu"></div>
+          </div>
+
+          <div class="dash-dropdown-wrap" id="adminProfileWrap">
+            <button type="button" class="header-icon-btn" id="adminProfileBtn" aria-label="Admin Profile">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </button>
+            <div class="dash-dropdown-menu">
+              <div style="padding:8px 10px; border-bottom:1px solid var(--cream-border); margin-bottom:6px;">
+                <strong id="adminProfileName" style="display:block; color:var(--purple-deep);">Admin</strong>
+                <span id="adminProfileEmail" style="font-size:0.8rem; color:var(--text-muted);">admin@roambite.com</span>
+              </div>
+              <a href="index.html" class="dash-nav-btn" style="color:var(--text-main); padding:8px 10px;">View Public Site</a>
+              <button type="button" class="dash-nav-btn" id="adminMenuLogout" style="color:var(--danger); padding:8px 10px;">Sign Out</button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="dash-content" id="adminMainView"></main>
+    </div>
+  </div>
+
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app-state.js"></script>
+  <script src="js/admin-dashboard.js"></script>
+</body>
+</html>
+
