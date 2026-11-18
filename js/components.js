@@ -95,18 +95,26 @@
           </button>
         </div>
       </div>
+    `;
 
-      <div class="mobile-drawer" id="mobileDrawer">
-        <div class="mobile-nav-list">
-          ${mobileNavHtml}
-        </div>
-        <a href="directory.html" class="btn btn-primary" style="width:100%;">Explore Trucks</a>
-        <div style="display:grid; grid-template-columns:1fr; gap:8px;">
-          <a href="auth.html" class="btn btn-outline">Login / Signup</a>
-          <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
-            <a href="admin-dashboard.html" class="btn btn-purple btn-sm">Admin Dashboard</a>
-            <a href="user-dashboard.html" class="btn btn-cream btn-sm">User Dashboard</a>
-          </div>
+    // Mount mobileDrawer outside <header> so backdrop-filter does not trap position:fixed
+    let drawer = document.getElementById("mobileDrawer");
+    if (!drawer) {
+      drawer = document.createElement("div");
+      drawer.id = "mobileDrawer";
+      drawer.className = "mobile-drawer";
+      mount.insertAdjacentElement("afterend", drawer);
+    }
+    drawer.innerHTML = `
+      <div class="mobile-nav-list">
+        ${mobileNavHtml}
+      </div>
+      <a href="directory.html" class="btn btn-primary" style="width:100%;">Explore Trucks</a>
+      <div style="display:grid; grid-template-columns:1fr; gap:8px;">
+        <a href="auth.html" class="btn btn-outline">Login / Signup</a>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+          <a href="admin-dashboard.html" class="btn btn-purple btn-sm">Admin Dashboard</a>
+          <a href="user-dashboard.html" class="btn btn-cream btn-sm">User Dashboard</a>
         </div>
       </div>
     `;

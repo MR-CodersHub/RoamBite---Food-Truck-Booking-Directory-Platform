@@ -56,8 +56,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (gate) gate.style.display = "none";
   shell.style.display = "grid";
-  document.getElementById("adminProfileName").textContent = session.name;
-  document.getElementById("adminProfileEmail").textContent = session.email;
 
   function doLogout() {
     S.logout();

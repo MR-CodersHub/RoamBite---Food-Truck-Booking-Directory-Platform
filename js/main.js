@@ -79,9 +79,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const mobileToggle = document.getElementById("mobileToggle");
   const mobileDrawer = document.getElementById("mobileDrawer");
   if (mobileToggle && mobileDrawer) {
+    const hamburgerSvg = `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>`;
+    const closeSvg = `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>`;
+
     mobileToggle.addEventListener("click", () => {
       const isOpen = mobileDrawer.classList.toggle("open");
       mobileToggle.setAttribute("aria-expanded", String(isOpen));
+      mobileToggle.innerHTML = isOpen ? closeSvg : hamburgerSvg;
+      document.body.style.overflow = isOpen ? "hidden" : "";
     });
   }
 

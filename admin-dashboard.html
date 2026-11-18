@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <title>Admin Dashboard — RoamBite Platform Management</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +20,7 @@
         <div class="dash-brand-row">
           <a href="index.html" class="brand-logo">
             <div class="brand-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M10 17h4V5H2v12h3"/><path d="M20 17h2v-3.34a4 4 0 0 0-1.17-2.83L19 9h-5v8h1"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 17h4V5H2v12h3"/><path d="M20 17h2v-3.34a4 4 0 0 0-1.17-2.83L19 9h-5v8h1"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>
             </div>
             <span>Roam<em>Bite</em></span>
           </a>
@@ -66,28 +67,6 @@
           <button type="button" class="header-icon-btn" id="dashThemeToggle" title="Toggle Theme">
             <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
           </button>
-
-          <div class="dash-dropdown-wrap" id="adminNotifWrap">
-            <button type="button" class="header-icon-btn" id="adminNotifBtn" aria-label="Notifications">
-              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-              <span class="notif-badge-dot" id="adminNotifDot"></span>
-            </button>
-            <div class="dash-dropdown-menu" id="adminNotifMenu"></div>
-          </div>
-
-          <div class="dash-dropdown-wrap" id="adminProfileWrap">
-            <button type="button" class="header-icon-btn" id="adminProfileBtn" aria-label="Admin Profile">
-              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-            </button>
-            <div class="dash-dropdown-menu">
-              <div style="padding:8px 10px; border-bottom:1px solid var(--cream-border); margin-bottom:6px;">
-                <strong id="adminProfileName" style="display:block; color:var(--purple-deep);">Admin</strong>
-                <span id="adminProfileEmail" style="font-size:0.8rem; color:var(--text-muted);">admin@roambite.com</span>
-              </div>
-              <a href="index.html" class="dash-nav-btn" style="color:var(--text-main); padding:8px 10px;">View Public Site</a>
-              <button type="button" class="dash-nav-btn" id="adminMenuLogout" style="color:var(--danger); padding:8px 10px;">Sign Out</button>
-            </div>
-          </div>
         </div>
       </header>
 

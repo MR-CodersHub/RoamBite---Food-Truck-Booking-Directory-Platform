@@ -60,8 +60,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let isVendor = session.role === "vendor";
   document.getElementById("userRoleBadge").textContent = isVendor ? "Food Truck Vendor" : "Customer Account";
-  document.getElementById("userProfileName").textContent = session.name;
-  document.getElementById("userProfileEmail").textContent = session.email;
 
   function doLogout() {
     S.logout();

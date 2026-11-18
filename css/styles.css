@@ -66,6 +66,7 @@
 
 /* Dark Theme Tokens & Full High-Contrast Overrides */
 [data-theme="dark"] {
+  color-scheme: dark;
   --off-white: #12051C;
   --cream-soft: #190926;
   --cream-warm: #210D33;
@@ -190,6 +191,7 @@
 [data-theme="dark"] .modal-header h3,
 [data-theme="dark"] .faq-question,
 [data-theme="dark"] .form-label,
+[data-theme="dark"] .price-amount,
 [data-theme="dark"] .nav-link.active,
 [data-theme="dark"] .nav-link:hover,
 [data-theme="dark"] .account-menu a,
@@ -232,12 +234,23 @@
 }
 
 [data-theme="dark"] .form-control,
+[data-theme="dark"] .form-control:focus,
 [data-theme="dark"] .hero-search-field input,
 [data-theme="dark"] .hero-search-field select,
 [data-theme="dark"] .dash-search-wrap input {
-  background: #14061E;
-  color: #F8F3FC;
+  background: #14061E !important;
+  color: #F8F3FC !important;
   border-color: #4D246B;
+}
+
+[data-theme="dark"] .form-control:focus {
+  border-color: var(--orange-warm) !important;
+  box-shadow: 0 0 0 3px rgba(255, 107, 43, 0.22);
+}
+
+[data-theme="dark"] input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1) brightness(1.2);
+  cursor: pointer;
 }
 
 [data-theme="dark"] .hero-search-field input,
@@ -282,6 +295,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 body {
@@ -290,7 +304,12 @@ body {
   color: var(--text-main);
   line-height: 1.6;
   overflow-x: hidden;
+  width: 100%;
   -webkit-font-smoothing: antialiased;
+}
+
+body:not(.dash-body):not([data-page="auth"]) {
+  padding-top: var(--header-height);
 }
 
 img {
@@ -373,6 +392,8 @@ h1, h2, h3, h4, h5 {
 .eyebrow {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   gap: 8px;
   font-size: 0.8125rem;
   font-weight: 700;
@@ -383,6 +404,16 @@ h1, h2, h3, h4, h5 {
   background: var(--pink-light);
   color: var(--purple-deep);
   margin-bottom: 14px;
+  max-width: 100%;
+}
+
+@media (max-width: 480px) {
+  .eyebrow {
+    font-size: 0.68rem;
+    letter-spacing: 0.04em;
+    padding: 6px 12px;
+    gap: 6px;
+  }
 }
 
 .bg-purple .eyebrow,
@@ -523,10 +554,13 @@ h1, h2, h3, h4, h5 {
    Header & Navigation
    ========================================================================== */
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   z-index: 1000;
-  background: rgba(255, 248, 240, 0.94);
+  background: rgba(255, 248, 240, 0.96);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--cream-border);
   height: var(--header-height);
@@ -732,9 +766,14 @@ h1, h2, h3, h4, h5 {
 .mobile-drawer {
   display: none;
   position: fixed;
-  inset: var(--header-height) 0 0 0;
+  top: var(--header-height);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: calc(100vh - var(--header-height));
+  height: calc(100dvh - var(--header-height));
   background: var(--cream-soft);
-  z-index: 999;
+  z-index: 1050;
   padding: 24px;
   overflow-y: auto;
   flex-direction: column;
@@ -771,6 +810,31 @@ h1, h2, h3, h4, h5 {
 /* ==========================================================================
    Reusable Cards & Grids
    ========================================================================== */
+.grid-2,
+.grid-3,
+.grid-4,
+.form-grid {
+  min-width: 0;
+}
+
+.grid-2 > *,
+.grid-3 > *,
+.grid-4 > *,
+.form-grid > *,
+.form-group {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.form-control,
+input,
+select,
+textarea,
+iframe {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
 .grid-2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1196,8 +1260,10 @@ h1, h2, h3, h4, h5 {
   }
   .mobile-toggle {
     display: inline-flex;
+    flex-shrink: 0;
   }
-  .header-actions .btn-primary {
+  .header-actions .btn-primary,
+  .header-actions .account-dropdown {
     display: none;
   }
   .grid-4 {
@@ -1208,9 +1274,55 @@ h1, h2, h3, h4, h5 {
   }
 }
 
+[data-theme="dark"] .mobile-drawer {
+  background: #14061E;
+}
+
+[data-theme="dark"] .mobile-nav-list a {
+  background: #1E0C2E;
+  color: #F8F3FC;
+  border-color: #3F1F5C;
+}
+
+[data-theme="dark"] .mobile-nav-list a.active {
+  background: var(--orange-warm);
+  color: #FFFFFF;
+  border-color: var(--orange-warm);
+}
+
 @media (max-width: 768px) {
   .section {
-    padding: 60px 0;
+    padding: 56px 0;
+  }
+  .section-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .page-hero-content,
+  .hero-home,
+  .hero-home2,
+  .promo-banner,
+  .concierge-showcase-card,
+  .spotlight-content {
+    text-align: center;
+  }
+  .page-hero-actions,
+  .location-chips,
+  .discovery-tabs,
+  .results-toolbar,
+  .hscroll-header-controls {
+    justify-content: center;
+  }
+  .page-hero-actions .btn,
+  .hero-home2 .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+  .hero-floating-card,
+  .page-hero-badge {
+    justify-content: center;
+    text-align: left;
   }
   .grid-2,
   .grid-3,
@@ -1221,15 +1333,67 @@ h1, h2, h3, h4, h5 {
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 32px;
+    text-align: center;
   }
-  .header-actions .account-trigger span.label-text {
-    display: none;
+  .footer-brand p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .social-links,
+  .footer-contact-list span {
+    justify-content: center;
   }
 }
 
 @media (max-width: 480px) {
   .container {
-    padding: 0 16px;
+    padding: 0 14px;
+  }
+  .header-inner {
+    gap: 10px;
+  }
+  .brand-logo {
+    font-size: 1.28rem;
+    gap: 8px;
+  }
+  .brand-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 11px;
+  }
+  .header-actions {
+    gap: 7px;
+  }
+  .header-icon-btn,
+  .mobile-toggle {
+    width: 36px;
+    height: 36px;
+  }
+  .contact-form-card,
+  .step-card,
+  .promo-banner,
+  .concierge-showcase-card,
+  .mission-hero-card,
+  .vision-card,
+  .chef-voice-card,
+  .rally-alert-card,
+  .guarantee-panel,
+  .support-sla-card,
+  .map-radar-panel,
+  .testimonial-feature-block,
+  .vendor-bento-lead,
+  .vendor-bento-card {
+    padding: 22px 18px !important;
+  }
+  .overlap-photo-stack {
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+  .overlap-photo-accent {
+    position: static;
+    width: 100%;
+    margin-top: 12px;
+    border: none;
   }
   .truck-card-actions {
     grid-template-columns: 1fr;
