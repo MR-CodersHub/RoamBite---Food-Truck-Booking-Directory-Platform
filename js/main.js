@@ -326,14 +326,26 @@ function initHomePage(UI, DATA) {
       <article class="testimonial-feature-block">
         <div>
           <span class="badge badge-booking" style="margin-bottom:18px;">Featured Event Review</span>
-          <p style="font-size:1.35rem; font-weight:600; line-height:1.5; margin-bottom:24px;">“${lead.quote}”</p>
-        </div>
-        <div class="testimonial-author" style="border-top-color:rgba(255,255,255,0.16);">
-          <div class="author-avatar" style="background:var(--orange-warm); color:#fff;">${lead.initials}</div>
-          <div>
-            <strong style="display:block; color:#fff;">${lead.name}</strong>
-            <span style="font-size:0.86rem; color:rgba(255,255,255,0.75);">${lead.role}</span>
+          <p style="font-size:1.35rem; font-weight:600; line-height:1.5; margin-bottom:20px;">“${lead.quote}”</p>
+          <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:20px;">
+            <span class="badge" style="background:rgba(255,255,255,0.14); color:#fff;">400 Guests Served</span>
+            <span class="badge" style="background:rgba(255,255,255,0.14); color:#fff;">3 Trucks Booked</span>
+            <span class="badge" style="background:rgba(255,255,255,0.14); color:#fff;">★ 5.0 Verified Host</span>
           </div>
+          <div style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.16); border-radius:var(--radius-md); padding:16px 18px; margin-bottom:16px;">
+            <div style="font-size:0.78rem; text-transform:uppercase; letter-spacing:0.08em; opacity:0.78; margin-bottom:6px; font-weight:700;">Booked Truck Lineup</div>
+            <div style="font-size:0.94rem; font-weight:600;">Sol & Smoke Birria • Velvet Smash Co. • Dulce & Espresso</div>
+          </div>
+        </div>
+        <div class="testimonial-author" style="border-top-color:rgba(255,255,255,0.16); justify-content:space-between; flex-wrap:wrap; gap:12px;">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div class="author-avatar" style="background:var(--orange-warm); color:#fff;">${lead.initials}</div>
+            <div>
+              <strong style="display:block; color:#fff;">${lead.name}</strong>
+              <span style="font-size:0.86rem; color:rgba(255,255,255,0.75);">${lead.role}</span>
+            </div>
+          </div>
+          <a href="directory.html" class="btn btn-primary btn-sm">Book Similar Lineup</a>
         </div>
       </article>
       <div class="testimonial-side-stack">

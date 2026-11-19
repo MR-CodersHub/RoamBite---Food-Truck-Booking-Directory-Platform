@@ -235,12 +235,18 @@
 
 [data-theme="dark"] .form-control,
 [data-theme="dark"] .form-control:focus,
-[data-theme="dark"] .hero-search-field input,
-[data-theme="dark"] .hero-search-field select,
 [data-theme="dark"] .dash-search-wrap input {
   background: #14061E !important;
   color: #F8F3FC !important;
   border-color: #4D246B;
+}
+
+[data-theme="dark"] .hero-search-field input,
+[data-theme="dark"] .hero-search-field select {
+  background: transparent !important;
+  color: #F8F3FC !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 [data-theme="dark"] .form-control:focus {

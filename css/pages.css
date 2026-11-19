@@ -79,8 +79,8 @@
 
 .page-hero-badge {
   position: absolute;
-  bottom: -18px;
-  left: -18px;
+  bottom: -16px;
+  left: 16px;
   background: var(--cream-soft);
   color: var(--purple-deep);
   padding: 14px 18px;
@@ -224,11 +224,11 @@
 
 .hero-floating-card {
   position: absolute;
-  bottom: -20px;
-  left: -24px;
+  bottom: -18px;
+  left: 16px;
   background: var(--cream-soft);
   color: var(--purple-deep);
-  padding: 16px 20px;
+  padding: 14px 18px;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-lg);
   display: flex;
@@ -980,14 +980,24 @@
   background: var(--cream-soft);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-photo {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  margin-bottom: 16px;
+  border: 3px solid var(--orange-warm);
+  box-shadow: var(--shadow-sm);
 }
 
 .team-profile-card:nth-child(even) {
   background: var(--pink-light);
   border-color: var(--pink-soft);
-  transform: translateY(14px);
 }
 
 .team-profile-card:hover {
